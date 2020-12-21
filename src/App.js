@@ -1,37 +1,28 @@
-import logo from './Images/huskerbeach-192.png';
 import './App.css';
 
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import Navigation from './Navigation';
+import Footer from "./Footer";
+
+import Home from './Pages/Home';
+import Games from './Pages/Games';
+import Support from './Pages/Support';
+import About from './Pages/About';
 
 function App() {
   return (
     <div className="App">
-
-<Navbar bg="dark" variant="dark">
-<Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-      <NavDropdown title="Middleware" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Unity</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Unreal</NavDropdown.Item>
-      </NavDropdown>
-      <Nav.Link href="#home">Games</Nav.Link>
-      <Nav.Link href="#home">Support</Nav.Link>
-      <Nav.Link href="#home">About</Nav.Link>
-    </Nav>
-    </Navbar.Collapse>
-    <Navbar.Brand href="#home">
-      <img
-        src={logo}
-        height="96"
-        width="96"
-        className="d-inline-block align-top"
-        alt="React Bootstrap logo"
-      />
-    </Navbar.Brand> 
-  </Navbar>
-      <div>
-      Put a router here for further info
-      </div>
+<Router>
+        <Navigation />
+        <Switch>
+          <Route path="/" exact component={() => <Home />} />
+          <Route path="/games" exact component={() => <Games />} />
+          <Route path="/support" exact component={() => <Support />} />
+          <Route path="/about" exact component={() => <About />} />
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }
