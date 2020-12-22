@@ -19,8 +19,8 @@ export default function Navigation() {
     <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <NavDropdown title="Middleware" id="basic-nav-dropdown">
-            <NavDropdown.Item href="middleware/unity">Unity</NavDropdown.Item>
-            <NavDropdown.Item href="/middleware/unreal">Unreal</NavDropdown.Item>
+            <NavDropdown.Item href="middleware">Unity</NavDropdown.Item>
+            <NavDropdown.Item href="/middleware">Unreal</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/games">Games</Nav.Link>
           <Nav.Link href="/support">Support</Nav.Link>
