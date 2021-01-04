@@ -22,7 +22,10 @@ export default function Middleware(props) {
             <Tab eventKey={eventKeys.UNITY} title="Unity">
               <Container>
                 <Row>
-                  <a href="https://assetstore.unity.com/packages/tools/ai/predictive-character-seeking-185419">
+                  <a
+                    href="https://assetstore.unity.com/packages/tools/ai/predictive-character-seeking-185419"
+                    target="_blank"
+                  >
                     <Image
                       src={predictive_character_seeking_unity_sm}
                       className="d-inline-block align-top"
