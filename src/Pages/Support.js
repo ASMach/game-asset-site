@@ -24,7 +24,7 @@ export default class Support extends Component {
   }
 
   validMail() {
-    const email = this.props.email;
+    const email = this.state.email;
     const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(email);
   }
@@ -52,7 +52,7 @@ export default class Support extends Component {
   onSubmit(event) {
     event.preventDefault();
 
-    if (this.state.name == "") {
+    if (this.state.name === "") {
       alert("No name specified, please enter one");
       return;
     }
@@ -60,7 +60,7 @@ export default class Support extends Component {
       alert("Invalid email, please re-enter and resend");
       return;
     }
-    if (this.state.message == "") {
+    if (this.state.message === "") {
       alert("No question found, please ask one");
       return;
     }
